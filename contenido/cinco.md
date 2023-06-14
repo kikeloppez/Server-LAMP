@@ -58,3 +58,30 @@ Añadimos un archivo para Wordpress.
 ```
 touch wordpress/.htaccess
 ```
+Copiamos el contenido del config-example a uno original.
+```
+cp wordpress/wp-config-sample.php wordpress/wp-config.php
+```
+Creamos la carpeta upgrade.
+```
+mkdir wordpress/wp-content/upgrade
+```
+Copiamos el contenido de wordpress en el directorio creado.
+```
+cp -a wordpress/. /var/www/wordpress/
+```
+Cambiamos permisos.
+```
+sudo chown -R www-data:www-data /var/www/wordpress
+sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+```
+Generamos valores de keys wordpress.
+```
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+```
+![2]()
+
+Sustituimos por los del fichero de configuración.
+![3]()
+![4]()
