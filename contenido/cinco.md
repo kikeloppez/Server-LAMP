@@ -85,3 +85,14 @@ curl -s https://api.wordpress.org/secret-key/1.1/salt/
 Sustituimos por los del fichero de configuración.
 ![3]()
 ![4]()
+
+Eliminamos el fichero index.html del directorio
+```
+rm -r /var/www/192.168.1.35/index.html
+```
+Accedemos al servidor mediante el navegador
+![5]()
+
+Realizamos la configuración e instalamos.
+![6]()
+![7]()
