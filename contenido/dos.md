@@ -123,3 +123,17 @@ Activamos los ficheros de configuración.
 
 Comprobamos el funcionamiento añadiendo "https://" en nuestro navegador.
 ![20]()
+
+Finalmente para redirigir "http" a "https" sin tener que añadirlo hago lo siguiente.
+
+Modifico el siguiente fichero.
+```
+nano /etc/apache2/sites-available/192.168.1.35.conf
+```
+Añado las siguientes lineas al final del documento.
+```
+<VirtualHost *:80>
+	ServerName 192.168.1.35
+	Redirect / https://192.168.1.35/
+</VirtualHost>
+```
