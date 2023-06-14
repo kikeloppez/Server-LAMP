@@ -57,6 +57,14 @@ Al intentar logearnos nos dará un error, por lo que debemos crear un nuevo usua
 mysql -u root -p
 ```
 ![11]()
+
+Ejecutamos las siguientes lineas con los datos que queremos ponerle.
+![12]()
+
+Una vez realizado, volvemos al navegador e intentamos logearnos con el usuario creado.
+![13]()
+![14]()
+
 ### Instalar certificado SSL (HTTPS)
 
 Instalamos el paquete UFW para permitir el acceso de Apache con el puerto 80 y 443.
@@ -67,4 +75,45 @@ Ejecutamos el siguiente comando.
 ```
 ufw allow "Apache Full"
 ```
-![]
+![15]()
+
+Activamos el servicio SSL con el siguiente comando.
+```
+a2enmod ssl
+```
+Y reiniciamos el servicio apache
+```
+systemclt restart apache2
+```
+![16]()
+
+Creamos el certificado SSL personal.
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/clave-kike.key -out /etc/ssl/certs/clave-kike.crt
+```
+![17]()
+
+Para activar el redireccionamiento creamos un archivo en la siguiente ruta.
+```
+nano /etc/apache2/sites-available/192.168.1.35.conf
+```
+Añadimos el siguiente contenido.
+```
+<VirtualHost *:443>
+   ServerName 192.168.1.35
+   DocumentRoot /var/www/192.168.1.35
+
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/clave-kike.crt
+   SSLCertificateKeyFile /etc/ssl/private/clave-kike.key
+</VirtualHost>
+```
+Creamos el directorio de nuestro servidor y un fichero index.html
+```
+mkdir /var/www/192.168.1.35
+```
+Dentro del index podemos poner lo que queramos, ya que será reemplazado en el futuro.
+```
+nano /var/www/192.168.1.35/index.html
+```
+![19]()
