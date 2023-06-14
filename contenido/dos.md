@@ -117,3 +117,9 @@ Dentro del index podemos poner lo que queramos, ya que será reemplazado en el f
 nano /var/www/192.168.1.35/index.html
 ```
 ![19]()
+
+Activamos los ficheros de configuración.
+![21]()
+
+Comprobamos el funcionamiento añadiendo "https://" en nuestro navegador.
+![20]()
