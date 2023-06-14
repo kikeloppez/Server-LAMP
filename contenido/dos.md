@@ -18,11 +18,11 @@ Una vez actualizado, instalamos los siguientes paquetes.
 apt install apache2 php php-mysql mysql-server
 ```
 ```
- apt install libapache2-mod-php phpmyadmin
+apt install libapache2-mod-php phpmyadmin
 ```
 Configuramos la contraseña para el servicio de PhpMyAdmin.
-![5]()
-![6]()
+![5](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/5.png)
+![6](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/6.png)
 
 Accedemos al directorio de Apache.
 ```
@@ -32,7 +32,7 @@ Creamos un enlace a PhpMyAdmin
 ```
 ln -s /usr/share/phpmyadmin phpmyadmin
 ```
-![7]()
+![7](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/7.png)
 
 Reiniciamos el servicio de apache.
 ```
@@ -46,24 +46,24 @@ Le añadimos la siguiente linea.
 ```
 <?php phpinfo(); ?>
 ```
-![8]()
-![9]()
+![8](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/8.png)
+![9](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/9.png)
 
 Vamos al navegador y accedemos al servidor mediante la IP.
-![10]()
+![10](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/10.png)
 
 Al intentar logearnos nos dará un error, por lo que debemos crear un nuevo usuario en MySQL con permisos administrador.
 ```
 mysql -u root -p
 ```
-![11]()
+![11](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/11.png)
 
 Ejecutamos las siguientes lineas con los datos que queremos ponerle.
-![12]()
+![12](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/12.png)
 
 Una vez realizado, volvemos al navegador e intentamos logearnos con el usuario creado.
-![13]()
-![14]()
+![13](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/13.png)
+![14](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/14.png)
 
 ### Instalar certificado SSL (HTTPS)
 
@@ -75,7 +75,7 @@ Ejecutamos el siguiente comando.
 ```
 ufw allow "Apache Full"
 ```
-![15]()
+![15](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/15.png)
 
 Activamos el servicio SSL con el siguiente comando.
 ```
@@ -85,13 +85,13 @@ Y reiniciamos el servicio apache
 ```
 systemclt restart apache2
 ```
-![16]()
+![16](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/16.png)
 
 Creamos el certificado SSL personal.
 ```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/clave-kike.key -out /etc/ssl/certs/clave-kike.crt
 ```
-![17]()
+![17](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/17.png)
 
 Para activar el redireccionamiento creamos un archivo en la siguiente ruta.
 ```
@@ -116,13 +116,13 @@ Dentro del index podemos poner lo que queramos, ya que será reemplazado en el f
 ```
 nano /var/www/192.168.1.35/index.html
 ```
-![19]()
+![19](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/19.png)
 
 Activamos los ficheros de configuración.
-![21]()
+![21](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/21.png)
 
 Comprobamos el funcionamiento añadiendo "https://" en nuestro navegador.
-![20]()
+![20](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/uno/20.png)
 
 Finalmente para redirigir "http" a "https" sin tener que añadirlo hago lo siguiente.
 
