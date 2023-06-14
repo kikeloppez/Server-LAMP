@@ -7,7 +7,7 @@ Para ello entramos en mysql.
 mysql -u root -p
 ```
 Ejecutamos los siguientes comandos.
-![1]()
+![1](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/1.png)
 
 Instalamos los siguientes paquetes.
 ```
@@ -80,19 +80,19 @@ Generamos valores de keys wordpress.
 ```
 curl -s https://api.wordpress.org/secret-key/1.1/salt/
 ```
-![2]()
+![2](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/2.png)
 
 Sustituimos por los del fichero de configuración.
-![3]()
-![4]()
+![3](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/3.png)
+![4](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/4.png)
 
 Eliminamos el fichero index.html del directorio
 ```
 rm -r /var/www/192.168.1.35/index.html
 ```
 Accedemos al servidor mediante el navegador
-![5]()
+![5](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/5.png)
 
 Realizamos la configuración e instalamos.
-![6]()
-![7]()
+![6](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/6.png)
+![7](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/7.png)
