@@ -1,4 +1,4 @@
-# Dos
+# Instalar y configurar LAMP
 
 En mi caso voy a usar una maquina virtual en VirtualBox para hacer el simulacro.
 
