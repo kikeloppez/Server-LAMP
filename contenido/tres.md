@@ -78,3 +78,5 @@ apachectl configtest
 systemctl reload apache2
 ```
 Finalmente volvemos a probar accediendo desde "http://192.168.1.35" y vemos como nos redirige a "https://"
+
+:arrow_left: [VOLVER](https://github.com/kikeloppez/Server-LAMP)
