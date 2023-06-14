@@ -66,15 +66,15 @@ Creamos la carpeta upgrade.
 ```
 mkdir wordpress/wp-content/upgrade
 ```
-Copiamos el contenido de wordpress en el directorio creado.
+Copiamos el contenido de wordpress en el directorio del servidor.
 ```
-cp -a wordpress/. /var/www/wordpress/
+cp -a wordpress/. /var/www/192.168.1.35/
 ```
 Cambiamos permisos.
 ```
-sudo chown -R www-data:www-data /var/www/wordpress
-sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
-sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+sudo chown -R www-data:www-data /var/www/192.168.1.35
+sudo find /var/www/192.168.1.35/ -type d -exec chmod 750 {} \;
+sudo find /var/www/192.168.1.35/ -type f -exec chmod 640 {} \;
 ```
 Generamos valores de keys wordpress.
 ```
