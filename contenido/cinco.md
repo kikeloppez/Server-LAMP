@@ -96,3 +96,5 @@ Accedemos al servidor mediante el navegador
 Realizamos la configuración e instalamos.
 ![6](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/6.png)
 ![7](https://github.com/kikeloppez/Server-LAMP/blob/main/contenido/dos/7.png)
+
+:arrow_left: [VOLVER](https://github.com/kikeloppez/Server-LAMP)
