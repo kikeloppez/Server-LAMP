@@ -13,7 +13,13 @@ Antes de instalar ningun programa vamos a actualizar el equipo usando los siguie
 ```
 apt update & apt upgrade -y
 ```
-
+Una vez actualizado, instalamos los siguientes paquetes.
+```
 apt install apache2 php php-mysql mysql-server
-
+```
+```
  apt install libapache2-mod-php phpmyadmin
+```
+Configuramos la contraseña para el servicio de PhpMyAdmin.
+![5]()
+![6]()
